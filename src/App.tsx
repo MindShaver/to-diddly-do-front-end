@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Navbar } from './Navbar/Navbar';
+import { TodoList } from './TodoList/TodoList';
 
 function App() {
   const greeting = "Hi, I'm learning.";
@@ -12,7 +13,7 @@ function App() {
     <div className={appClassName}>
       <Navbar />
       <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
+        <TodoList />
         <p>{greeting}</p>
 
         <a

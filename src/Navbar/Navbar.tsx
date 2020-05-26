@@ -5,15 +5,15 @@ export interface INavbarProps {}
 
 export const Navbar: React.FC<INavbarProps> = ({}) => {
   return (
-    <>
+    <nav>
       <ul>
         <li>
           <h1>To-Do</h1>
         </li>
         <li>
-          <a href='#'>ABOUT</a>
+          <a href='#'>About</a>
         </li>
       </ul>
-    </>
+    </nav>
   );
 };

@@ -1,6 +1,5 @@
-export interface ITodo {
-  title: string;
-  description: string;
-  date: number;
-  completed: boolean;
+import { ITodoModel } from '../Data';
+
+export interface ITodo extends ITodoModel {
+  onDelete: (id: number) => void;
 }

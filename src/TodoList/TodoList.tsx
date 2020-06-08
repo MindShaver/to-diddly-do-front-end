@@ -3,9 +3,10 @@ import { Todo } from '../Todo/Todo';
 import { todoData, ITodoModel } from './../Data';
 import { ITodo } from '../Todo/ITodo';
 import './TodoList.css';
+import { AddTodo } from '../AddTodo/AddTodo';
 
 export const TodoList: FC = () => {
-  const [todos, setTodos] = useState<ITodoModel[]>();
+  const [todos, setTodos] = useState<ITodoModel[]>([]);
 
   useEffect(() => {
     setTodos(todoData);
@@ -15,8 +16,14 @@ export const TodoList: FC = () => {
     setTodos(todos?.filter((x) => x.id != id));
   };
 
+  const onAdd = (todoToAdd: ITodoModel): void => {
+    const currentTodos = [...todos, todoToAdd];
+    setTodos(currentTodos);
+  };
+
   return (
     <div className='list-container'>
+      <AddTodo addTodoCallback={onAdd} />
       {todos?.map((x: ITodoModel) => {
         return (
           <Todo

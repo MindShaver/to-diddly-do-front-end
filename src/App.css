@@ -7,3 +7,10 @@
   margin: auto;
   padding-top: 10px;
 }
+
+@media only screen and (min-width: 520px) {
+  .App {
+    width: 500px;
+    background-color: white;
+  }
+}

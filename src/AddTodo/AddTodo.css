@@ -1,5 +1,30 @@
+label {
+  display: inline-block;
+}
+
+input {
+  display: inline-block;
+}
+
+.addTodo {
+  height: 300px;
+  width: 500px;
+}
+
 .btn-add {
   background-color: #2a265f;
+  border: 0;
+  border-radius: 50px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  color: white;
+  font-size: 16px;
+  padding: 12px 25px;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
+.btn-cancel {
+  background-color: gray;
   border: 0;
   border-radius: 50px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);

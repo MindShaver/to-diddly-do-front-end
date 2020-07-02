@@ -7,6 +7,7 @@ import { AddTodo } from '../AddTodo/AddTodo';
 
 export const TodoList: FC = () => {
   const [todos, setTodos] = useState<ITodoModel[]>([]);
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
   useEffect(() => {
     setTodos(todoData);
@@ -19,11 +20,16 @@ export const TodoList: FC = () => {
   const onAdd = (todoToAdd: ITodoModel): void => {
     const currentTodos = [...todos, todoToAdd];
     setTodos(currentTodos);
+    setIsModalOpen(false);
+  };
+
+  const onCancel = () => {
+    setIsModalOpen(false);
   };
 
   return (
     <div className='list-container'>
-      <AddTodo addTodoCallback={onAdd} />
+      <button onClick={() => setIsModalOpen(true)}>+</button>
       {todos?.map((x: ITodoModel) => {
         return (
           <Todo
@@ -36,6 +42,14 @@ export const TodoList: FC = () => {
           />
         );
       })}
+      {isModalOpen && (
+        <div className='overlay'>
+          <div className='dialog'>
+            <h1>Add To-do</h1>
+            <AddTodo addTodoCallback={onAdd} onCancelCallback={onCancel} />
+          </div>
+        </div>
+      )}
     </div>
   );
 };

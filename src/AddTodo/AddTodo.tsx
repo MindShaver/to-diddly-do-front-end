@@ -5,7 +5,10 @@ import { ITodo } from '../Todo/ITodo';
 import * as faker from 'faker';
 import { ITodoModel } from '../Data';
 
-export const AddTodo: FC<IAddTodo> = ({ addTodoCallback }) => {
+export const AddTodo: FC<IAddTodo> = ({
+  addTodoCallback,
+  onCancelCallback,
+}) => {
   const [todoName, setTodoName] = useState<string>('');
   const [todoDescription, setTodoDescription] = useState<string>('');
   const createTodo = (event: any) => {
@@ -21,12 +24,12 @@ export const AddTodo: FC<IAddTodo> = ({ addTodoCallback }) => {
   };
 
   return (
-    <div>
+    <div className='addTodo'>
       <form onSubmit={createTodo}>
         <label>
           Todo Name:
           <input
-            required
+            //required
             type='text'
             value={todoName}
             onChange={(e) => {
@@ -37,7 +40,7 @@ export const AddTodo: FC<IAddTodo> = ({ addTodoCallback }) => {
         <label>
           Todo Description:
           <input
-            required
+            //required
             type='text'
             value={todoDescription}
             onChange={(e) => {
@@ -46,6 +49,9 @@ export const AddTodo: FC<IAddTodo> = ({ addTodoCallback }) => {
           />
         </label>
         <input className='btn-add' type='submit' value='Add Todo' />
+        <button className='btn-cancel' onClick={() => onCancelCallback}>
+          Cancel
+        </button>
       </form>
     </div>
   );

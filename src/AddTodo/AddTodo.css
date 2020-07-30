@@ -1,11 +1,47 @@
+label {
+  display: inline-block;
+}
+
+input {
+  display: inline-block;
+}
+
+.add-todo {
+  height: 300px;
+  width: 500px;
+}
+
 .btn-add {
-  background-color: #2a265f;
+  background-color: rgb(44, 97, 184);
   border: 0;
-  border-radius: 50px;
+  border-radius: 5px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
   color: white;
   font-size: 16px;
   padding: 12px 25px;
   letter-spacing: 1px;
   margin-top: 10px;
+  margin-right: 10px;
+}
+
+.btn-add:hover {
+  background-color: rgb(62, 130, 240);
+  cursor: pointer;
+}
+
+.btn-cancel {
+  background-color: grey;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  color: black;
+  font-size: 16px;
+  padding: 12px 25px;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
+.btn-cancel:hover {
+  background-color: rgb(165, 165, 165);
+  cursor: pointer;
 }

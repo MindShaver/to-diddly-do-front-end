@@ -1,5 +1,6 @@
-import { ITodoModel } from '../Data';
+import { ITodoModel } from "../Data";
 
 export interface IAddTodo {
   addTodoCallback: (todo: ITodoModel) => void;
+  onCancel: () => void;
 }

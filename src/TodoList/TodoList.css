@@ -6,3 +6,45 @@
   justify-content: center;
   align-items: center;
 }
+
+.root {
+  font-family: sans-serif;
+  text-align: center;
+  position: relative;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.dialog {
+  background: white;
+  border-radius: 5px;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.modal-button {
+  background-color: rgb(238, 238, 238);
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  color: #2a265f;
+  font-size: 16px;
+  padding: 12px 25px;
+  margin-top: 20px;
+}
+
+.modal-button:hover {
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+}

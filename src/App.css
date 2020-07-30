@@ -8,9 +8,9 @@
   padding-top: 10px;
 }
 
-@media only screen and (min-width: 520px) {
+@media only screen and (max-width: 520px) {
   .App {
-    width: 500px;
+    width: 1000px;
     background-color: white;
   }
 }

@@ -14,16 +14,19 @@ export const Todo: FC<ITodo> = ({
     onDelete(id);
   };
   return (
-    <div className='card-wrapper'>
-      <div className='card'>
-        <h2>{title}</h2>
-        <h6>{description}</h6>
-        <p>{date}</p>
-        <p>{completed}</p>
-        <button className='btn-remove' onClick={handleDelete}>
-          Remove
-        </button>
+    <div>
+  <div className='card-wrapper'>
+        <div className='card'>
+          <h2>{title}</h2>
+          <h6>{description}</h6>
+          <p>{date}</p>
+          <p>{completed}</p>
+          <button className='btn-remove' onClick={handleDelete}>
+            Remove
+          </button>
+        </div>
       </div>
     </div>
+    
   );
 };

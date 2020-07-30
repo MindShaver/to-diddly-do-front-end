@@ -1,7 +1,6 @@
 import React, { FC, useState } from "react";
 import "./AddTodo.css";
 import { IAddTodo } from "./IAddTodo";
-import { ITodo } from "../Todo/ITodo";
 import * as faker from "faker";
 import { ITodoModel } from "../Data";
 
